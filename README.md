@@ -2,10 +2,6 @@
 
 A dropdown time picker (hour|minute|second) for **Vue 2.x**, with flexible time format support.
 
-## Demo
-
-You can see the **Vue2 Timepicker** in action in the [Demo Page](https://xxrockonxx.github.io/vue2-timepicker/)
-
 ## Dependencies
 
 [Vue.js](http://vuejs.org/) v2.0+
@@ -15,13 +11,13 @@ You can see the **Vue2 Timepicker** in action in the [Demo Page](https://xxrocko
 Through NPM **(Recommended)**
 
 ```bash
-npm install git+https://github.com/xxRockOnxx/vue2-timepicker.git --save-dev
+npm install git+https://github.com/yoldar/vue2-timepicker.git --save-dev
 ```
 
 Bower
 
 ```bash
-bower install https://github.com/xxRockOnxx/vue2-timepicker.git#master --save-dev
+bower install https://github.com/yoldar/vue2-timepicker.git#master --save-dev
 ```
 
 ## Get Started
@@ -133,6 +129,18 @@ VueTimepicker will recognizes the following tokens in the format string
 
 ```html
 <vue-timepicker hide-clear-button></vue-timepicker>
+```
+
+### Add Minimums and Maximums for the Hours
+
+```html
+<vue-timepicker :hourmin="9" :hourmax="17"></vue-timepicker>
+```
+
+### Disable
+
+```html
+<vue-timepicker :disabled="true"></vue-timepicker>
 ```
 
 ### Bind Value with `v-model`
@@ -249,7 +257,8 @@ Prop                  | Type      | Required | Default Value
 **second-interval**   | _Number_  | no       | _undefined_
 **hide-clear-button** | _Boolean_ | no       | false
 **disabled**          | _Boolean_ | no       | _undefined_
-**disabledValues**    | _Object_  | no       | { hours: [], minute: [], second: [], apm: [] }
+**hourmin**           | _Number_  | no       | 0
+**hourmax**           | _Number_  | no       | _undefined_        
 
 ## Contribution
 
